@@ -1,0 +1,30 @@
+---
+layout: page
+title: Location
+---
+  <style type="text/css">
+  #testMap {
+    width: 400px;
+    height: 400px;
+  }
+  </style>
+  <section>
+    <h4>Location</h4>
+    <div id="testMap"></div>
+    <script type="text/javascript">
+                        var oPoint = new nhn.api.map.LatLng(37.5010226, 127.0396037);
+                        nhn.api.map.setDefaultPoint('LatLng');
+                        oMap = new nhn.api.map.Map('testMap' ,{
+                                                point : oPoint,
+                                                zoom : 10,
+                                                enableWheelZoom : true,
+                                                enableDragPan : true,
+                                                enableDblClickZoom : false,
+                                                mapMode : 0,
+                                                activateTrafficMap : false,
+                                                activateBicycleMap : false,
+                                                minMaxLevel : [ 1, 14 ],
+                                                size : new nhn.api.map.Size(500, 400)
+                                        });
+                </script>
+  </section>
