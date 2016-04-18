@@ -14,9 +14,6 @@
               {% if my_page.title %}
               <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
               {% endif %}
-              {% if my_page.title == test %}
-                {% break %}
-              {% endif %}
             {% endfor %}
           </ul>
         </div>
