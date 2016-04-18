@@ -4,22 +4,32 @@ title: Location
 ---
   <style type="text/css">
   #map {
-    height: 500px;
+    height: 300px;
   }
   </style>
   <section>
     <div class="mapspace">
-      location
         <span class="image fit" id="map"></span>
+        서울 종로구 계동길 73-1<br/>
+        주변 지하철역<br/>
+        3호선 안국역<br/>
     </div>
     <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=490e6baa1d8f4838316c524b8a90f5c9"></script>
     <script>
       var container = document.getElementById('map');
       var options = {
-        center: new daum.maps.LatLng(33.450701, 126.570667),
+        center: new daum.maps.LatLng(37.5805545, 126.9866815),
         level: 3
       };
-
       var map = new daum.maps.Map(container, options);
+
+      var markerPosition  = new daum.maps.LatLng(37.5805545, 126.9866815);
+
+      var marker = new daum.maps.Marker({
+          position: markerPosition
+      });
+
+      marker.setMap(map);
+
     </script>
   </section>
