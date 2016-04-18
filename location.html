@@ -3,12 +3,21 @@ layout: page
 title: Location
 ---
   <style type="text/css">
-  #testMap {
+  #map {
     width: 400px;
     height: 400px;
   }
   </style>
   <section>
-    <h4>Location</h4>
-    <div id="testMap"></div>
+    <div id="map"></div>
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=490e6baa1d8f4838316c524b8a90f5c9"></script>
+    <script>
+      var container = document.getElementById('map');
+      var options = {
+        center: new daum.maps.LatLng(33.450701, 126.570667),
+        level: 3
+      };
+
+      var map = new daum.maps.Map(container, options);
+    </script>
   </section>

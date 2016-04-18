@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <title>샘플 코드</title>
-</head>
-<body>
-      <div id="testMap" style="width:500px; height:400px;"></div>
-      <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=490e6baa1d8f4838316c524b8a90f5c9"></script>
-      <script>
-      var container = document.getElementById('testMap'); //지도를 담을 영역의 DOM 레퍼런스
-      var options = { //지도를 생성할 때 필요한 기본 옵션
-      	center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-      	level: 3 //지도의 레벨(확대, 축소 정도)
+---
+layout: page
+title: test
+---
+  <style type="text/css">
+  #map {
+    width: 400px;
+    height: 400px;
+  }
+  </style>
+  <section>
+    <div id="map"></div>
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=490e6baa1d8f4838316c524b8a90f5c9"></script>
+    <script>
+      var container = document.getElementById('map');
+      var options = {
+        center: new daum.maps.LatLng(33.450701, 126.570667),
+        level: 3
       };
 
-      var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
-      </script>
-</body>
-</html>
+      var map = new daum.maps.Map(container, options);
+    </script>
+  </section>
